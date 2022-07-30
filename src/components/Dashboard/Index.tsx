@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 function Index() {
   return (
-    <div>
+    <div >
       <h1>Dash board</h1>
       <div>
       <Link to="/">
