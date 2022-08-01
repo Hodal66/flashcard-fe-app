@@ -36,7 +36,7 @@ function Login() {
   };
 
   return (
-    <div>
+    <div className="font-serif">
       <Navigation />
       <div
         style={{
@@ -56,8 +56,11 @@ function Login() {
             boxShadow: "12px 20px #ddd",
           }}
         >
-          <h1 style={{ display: "flex", justifyContent: "center" }}>
-            Hello register
+          <h1
+            style={{ display: "flex", justifyContent: "center" }}
+            className="text-3xl font-serif"
+          >
+            Login now 👐
           </h1>
           <form onSubmit={handleSubmit}>
             <div>

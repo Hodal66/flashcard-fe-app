@@ -50,7 +50,7 @@ function Register() {
   };
 
   return (
-    <div>
+    <div className="font-serif">
       <Navigation />
       <div
         style={{
@@ -70,8 +70,11 @@ function Register() {
             boxShadow: "12px 20px #ddd",
           }}
         >
-          <h1 style={{ display: "flex", justifyContent: "center" }}>
-            Hello register
+          <h1
+            style={{ display: "flex", justifyContent: "center" }}
+            className="text-3xl font-serif"
+          >
+            🔥 Register To Start
           </h1>
           <form onSubmit={handleSumitRegister}>
             <div>
