@@ -7,7 +7,7 @@ function Navigation() {
   return (
     <div style={{display:"flex", padding:theme.primary.fontSize,
      backgroundColor:theme.primary.main,
-     color:theme.primary.text, justifyContent:"space-around",height:"30%"}}>
+      justifyContent:"space-around",height:"30%",color:"blue"}}>
 
       <div style={{backgroundColor:theme.secondary.main}}>
           <img src={logo} alt="hodalLogo"  style={{width:"20vh", height:"10vh"}}/>
@@ -18,12 +18,9 @@ function Navigation() {
         
         <Link to="/">
           <button style={{background:theme.secondary.text,
-          padding:"5px 30px",border:"none", borderRadius:"10px"}}>Home</button>
+          padding:"5px 30px",border:"none", borderRadius:"10px",color:"blue"}}>Home</button>
         </Link>
-        <Link to="/about">
-          <button style={{background:theme.secondary.text,border:"none", borderRadius:"10px",
-          padding:"5px 30px"}}>About</button>
-        </Link>
+    
         <Link to="/login">
           <button style={{background:theme.secondary.text,border:"none", borderRadius:"10px",
           padding:"5px 30px"}}>Login</button>
