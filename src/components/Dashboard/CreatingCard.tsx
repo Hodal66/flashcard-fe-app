@@ -37,7 +37,7 @@ function CreatingCard() {
               style={{ background: "#231955" }}
               className="w-full mt-5 rounded-md p-2"
             >
-              Send
+              Add
             </button>
           </form>
         </div>

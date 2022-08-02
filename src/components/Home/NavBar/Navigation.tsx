@@ -1,74 +1,53 @@
-import React, { useContext } from "react";
-import { Themecontext } from "../../context/ThemeContext";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.jpg";
+import { FaBars, FaTimes } from "react-icons/fa";
+import "./Navigation.css";
 function Navigation() {
-  const theme = useContext(Themecontext);
+  const [click, setClick] = useState(false);
+  const handleClick = () => {
+    setClick(!click);
+  };
   return (
-    <div
-      style={{
-        display: "flex",
-        padding: theme.primary.fontSize,
-        backgroundColor: theme.primary.main,
-        justifyContent: "space-around",
-        height: "30%",
-        color: "blue",
-      }}
-    >
-      <div style={{ backgroundColor: theme.secondary.main }}>
+    <div className="font-serif nagivation main">
+      <div>
         <img
           src={logo}
           alt="hodalLogo"
-          style={{ width: "20vh", height: "10vh" }}
+          style={{
+            width: "20vh",
+            height: "10vh",
+            marginInlineStart: "2rem",
+            marginBottom: "2rem",
+          }}
         />
       </div>
-
-      <div
-        style={{
-          display: "flex",
-          border: "none",
-          gap: theme.secondary.fontSize,
-          padding: theme.primary.fontSize,
-        }}
-      >
+      {/* here is the stating of nav-menus */}
+      <ul className={click ? "nav-menu active" : "nav-menu"}>
         <Link to="/">
-          <button
-            style={{
-              background: theme.secondary.text,
-              padding: "5px 30px",
-              border: "none",
-              borderRadius: "10px",
-              color: "blue",
-            }}
-          >
-            Home
-          </button>
+          <li>
+            {" "}
+            <span>Home</span>
+          </li>
         </Link>
 
         <Link to="/login">
-          <button
-            style={{
-              background: theme.secondary.text,
-              border: "none",
-              borderRadius: "10px",
-              padding: "5px 30px",
-            }}
-          >
-            Login
-          </button>
+          <li>
+            <span>Login</span>
+          </li>
         </Link>
         <Link to="/register">
-          <button
-            style={{
-              background: theme.secondary.text,
-              border: "none",
-              borderRadius: "10px",
-              padding: "5px 30px",
-            }}
-          >
-            Register
-          </button>
+          <li>
+            <span>Register</span>
+          </li>
         </Link>
+      </ul>
+      <div className="humberger" onClick={handleClick}>
+        {click ? (
+          <FaTimes size={30} style={{ color: "white" }} />
+        ) : (
+          <FaBars size={30} style={{ color: "white" }} />
+        )}
       </div>
     </div>
   );
