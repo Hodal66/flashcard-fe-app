@@ -10,6 +10,7 @@ function Index() {
             src={logo}
             style={{ height: "10vh", width: "10vw" }}
             className="flex justify-center m-5"
+            alt="mylogo"
           />
         </Link>
         <h1 style={{ lineHeight: "2.5rem" }} className="text-4xl pl-10 pr-10 ">
@@ -42,7 +43,7 @@ function Index() {
             Create Card
           </button>
         </Link>
-        <Link to="/logout">
+        <Link to="/">
           <button
             style={{ background: "#231955" }}
             className=" w-full p-5 border border-l-0 border-blue-400 hover:bg-blue-500"

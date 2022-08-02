@@ -14,6 +14,7 @@ function Navigation() {
         height: "30%",
         color: "blue",
       }}
+      className="font-serif"
     >
       <div style={{ backgroundColor: theme.secondary.main }}>
         <img

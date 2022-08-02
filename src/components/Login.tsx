@@ -2,6 +2,8 @@ import React, { useState, useContext, SyntheticEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Themecontext } from "./context/ThemeContext";
 import Navigation from "./Home/NavBar/Navigation";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 type AuthUser = {
   email: String;
@@ -9,6 +11,8 @@ type AuthUser = {
 };
 
 function Login() {
+  const notify = async () => toast.success("Well Done !");
+
   const navigate = useNavigate();
   const theme = useContext(Themecontext);
   const [email, setEmail] = useState<string | null>("");
@@ -32,6 +36,7 @@ function Login() {
     if (!isFormValid) {
       return;
     }
+    notify();
     navigate("/dashboard");
   };
 
@@ -121,6 +126,7 @@ function Login() {
             >
               Login
             </button>
+            <ToastContainer />
           </form>
         </div>
       </div>
