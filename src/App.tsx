@@ -1,11 +1,14 @@
 import React from 'react'
+import AllRoutes from './components/routes/AllRoutes'
 
 function App() {
+
   return (
     <div>
-      <h1>Hello flash card </h1>
+      <AllRoutes />
     </div>
   )
 }
+
 
 export default App
