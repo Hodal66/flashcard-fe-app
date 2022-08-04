@@ -1,11 +1,11 @@
 export const theme ={
     primary:{
-        main:"#231955",
+        main:"#0a275b",
         text:"#fff",
         fontSize:"20px"
     },
     secondary:{
-        main:"#1F4690",
+        main:"#0a275b",
         text:"#fff",
         fontSize:"20px"
     },
@@ -15,7 +15,7 @@ export const theme ={
     },
     button:{
         radius:"12px",
-        bgColor:"#FFE5B4",
+        bgColor:"#0a275b",
         color:"#ede",
 
     }

@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.jpg";
+import { AiFillFolderAdd } from "react-icons/ai";
+import { GrStorage } from "react-icons/gr";
 function Index() {
   return (
-    <div className="bg-blue-900 h-15 w-full text-white flex pt-5 justify-evenly relative">
+    <div className="bg-blue-900 h-15 w-full text-white flex pt-5 justify-evenly border">
       <div className="flex">
         <Link to="/">
           <img
@@ -19,35 +21,29 @@ function Index() {
       </div>
       <div className="flex  gap-0 ">
         <Link to="/">
-          <button
-            style={{ background: "#231955" }}
-            className=" w-full p-5 border border-l-0 border-blue-400"
-          >
-            Home
+          <button style={{ background: "#0a275b" }} className=" w-full p-5 m-2">
+            🏙 Home
           </button>
         </Link>
         <Link to="/view-all-cards">
           <button
-            style={{ background: "#231955" }}
-            className=" w-full p-5 border border-l-0 border-blue-400"
+            style={{ background: "#0a275b" }}
+            className=" w-full p-5 m-2 flex gap-3 align-baseline"
           >
-            All Cards
+            <GrStorage className="text-2xl text-sky-200" /> All Cards
           </button>
         </Link>
 
         <Link to="/create-card">
           <button
-            style={{ background: "#231955" }}
-            className=" w-full p-5 border border-l-0 border-blue-400 hover:bg-blue-500"
+            style={{ background: "#0a275b" }}
+            className=" w-full p-5 m-2 flex gap-2 align-baseline"
           >
-            Create Card
+            <AiFillFolderAdd className="text-2xl" /> Create Card
           </button>
         </Link>
         <Link to="/">
-          <button
-            style={{ background: "#231955" }}
-            className=" w-full p-5 border border-l-0 border-blue-400 hover:bg-blue-500"
-          >
+          <button style={{ background: "#0a275b" }} className=" w-full p-5 m-2">
             Logout
           </button>
         </Link>

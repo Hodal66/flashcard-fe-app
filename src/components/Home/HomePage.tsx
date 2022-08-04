@@ -19,7 +19,7 @@ function HomePage() {
         >
           Welcome to this page
         </h1>
-        <div>
+        <div className="md:text-lg">
           <p style={{ width: "50vw", fontSize: "24px", color: "#777" }}>
             Flashcards are small note cards used for testing and improving
             memory through practiced information retrieval. Flashcards are
@@ -33,11 +33,12 @@ function HomePage() {
           <Link to="/dashboard">
             <button
               style={{
-                background: "#1F4690",
+                background: "#0a275b",
                 color: "#fff",
                 fontWeight: 600,
                 borderRadius: "10px",
                 border: "none",
+                marginTop: "1rem",
                 padding: "10px 30px",
               }}
             >
